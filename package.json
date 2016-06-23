@@ -1,0 +1,17 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "boiler plate for angularJS - systemJS",
+  "main": "boot.js",
+  "dependencies": {
+    "systemjs": "0.19.24",
+    "jquery": "^2.2.0",
+    "angular": "^1.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

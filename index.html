@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<title>BoilerPlate AngularJs 1.5.5</title>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+
+	<script>
+		System.config({
+			packages: {
+				output: {
+					format: 'register',
+					defaultExtension: 'js'
+				}
+			},
+			map: {
+				app: 'output/boot.js',
+				module1: 'output/module1/module1.js'
+			},
+			meta: {
+				'app': { deps: [ 'module1' ] },
+				'*.js': {
+					scriptLoad: true,
+				}
+			}
+		});
+		System.import('output/boot.js')
+			  .then(null, console.error.bind(console));
+  	</script>
+
+</head>
+
+<body ng-controller="mainCtrl as vm">
+	{{vm.message}}
+	<main-view></main-view>
+</body>
+</html>
