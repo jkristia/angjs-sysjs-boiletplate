@@ -3,6 +3,7 @@ export class Module1CtrlB {
 	message: string;
 	constructor() {
 		this.message = "hello from Module1CtrlB";
+		console.log('Module1CtrlB cstor');
 	}
 }
 export class Module1ComponentB implements ng.IComponentOptions {

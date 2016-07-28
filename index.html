@@ -14,19 +14,24 @@
 					defaultExtension: 'js'
 				}
 			},
-			map: {
-				app: 'output/boot.js',
-				module1: 'output/module1/module1.js'
-			},
-			meta: {
-				'app': { deps: [ 'module1' ] },
-				'*.js': {
-					scriptLoad: true,
-				}
+			// ** uncomment below if individual files are used **
+			// map: {
+			// 	boot: 'output/boot.js',
+			// 	module1: 'output/module1/module1.js'
+			// },
+			// meta: {
+			// 	'boot': { deps: [ 'module1' ] },
+			// 	'*.js': {
+			// 		scriptLoad: true,
+			// 	}
+			// }
+
+			// ** uncomment below if single output file is used **
+			bundles: {
+				'/output/all.bundle': ['boot']
 			}
 		});
-		System.import('output/boot.js')
-			  .then(null, console.error.bind(console));
+		System.import('boot').then(null, console.error.bind(console));
   	</script>
 
 </head>
